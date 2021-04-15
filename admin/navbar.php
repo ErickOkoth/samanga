@@ -21,9 +21,13 @@
       <?php
       $username=$_SESSION['username'];
       echo $username;
+     
       ?>
       </a></li>
-      <li><a href="../adminlogout.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      <li><a href="../index.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
     </ul>
+  
   </div>
+ 
+
 </nav> 

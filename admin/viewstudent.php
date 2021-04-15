@@ -23,7 +23,7 @@ include('navbar.php');
 ?>
 <div class="container">
 <?php
-include_once"../connection.php";
+include_once("../connection.php");
 if(isset($_POST['update'])){	
   $regno=$_POST['regno'];
   $nama=$_POST['nama'];
@@ -34,13 +34,14 @@ if(isset($_POST['update'])){
       echo " <strong> Success!.</strong> Information updated!!";
      echo "</div>";
   }else{
-  echo "<div class='alert alert-danger'>";
+  echo "<div class='alert alert-danger '>";
+  
    echo " <strong> Sorry!.</strong> Cannot update information!!";
   echo "</div>";
   }
   }
   if(isset($_POST['delete'])){	
-    $idno=$_POST['regno'];
+    $regno=$_POST['regno'];
     $sql = "DELETE FROM student WHERE regno='$regno'";
     if ($conn->query($sql) === TRUE) {
         echo "<div class='alert alert-success'>";
@@ -78,7 +79,7 @@ while($row = $result->fetch_assoc()){
     echo "<td>".$row["nama"]."</td>";
     echo "<td>".$row["phone"]."</td>";
     
-    echo "<td><a href='#' class='btn btn-info btn-sm' data-toggle='modal' data-target='#myModal1'>Edit</a></td> ";
+    echo "<td><a href='#' class='btn btn-primary btn-lg' data-toggle='modal' data-target='#myModall'>Edit</a></td> ";
     echo "</tr>";
 }
 ?>
@@ -103,16 +104,16 @@ $(document).ready(function(){
                     table.rows[i].onclick = function()
                     {
                          //rIndex = this.rowIndex;
-						  document.getElementById("idno").value = this.cells[0].innerHTML;
-                         document.getElementById("name").value = this.cells[1].innerHTML;
+						             document.getElementById("regno").value = this.cells[0].innerHTML;
+                         document.getElementById("nama").value = this.cells[1].innerHTML;
                          document.getElementById("phone").value = this.cells[2].innerHTML;
                     };
                 }
   </script>
 
 <!-- Modal -->
-<div id="myModal1" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+<div id="myModall" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg ">
 
     <!-- Modal content-->
     <div class="modal-content">
@@ -122,7 +123,7 @@ $(document).ready(function(){
       </div>
       <div class="modal-body">
        
-	    <form role="form"  method="post" action="viewstudent.php">
+	    <form role="form"  method="POST"  action="viewstudent.php">
 		 <div class="form-group">
     <label for="email">REGNO:</label>
     <input type="text" class="form-control" name="regno" id="regno" >
@@ -133,7 +134,7 @@ $(document).ready(function(){
   </div>
   <div class="form-group">
     <label for="pwd">PHONE NO</label>
-    <input type="text" class="form-control" name="phone" id="phone">
+    <input type="number" class="form-control" name="phone" id="phone">
   </div>
   <input type="submit" name="update" value="Update" class="btn btn-success ">
   <input type="submit" name="delete" value="Delete" class="btn btn-danger ">
@@ -141,7 +142,7 @@ $(document).ready(function(){
 	   
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
     </div>
 

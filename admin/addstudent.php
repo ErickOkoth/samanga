@@ -52,7 +52,7 @@ echo "</div>";
 }
   ?>
 
-  <form role="form" method="POST" action="addstudent.php" >
+  <form role="form" method="POST" id="form" action="addstudent.php" >
   <div class="form-group">
     <label for="email">Full Name:</label>
     <input type="text" class="form-control" name="nama" id="nama" required="required" placeholder="enter your full name">
@@ -67,9 +67,10 @@ echo "</div>";
     <label for="pwd">Phone No:</label>
     <input type="number" class="form-control" name="phone" id="phone" required="required" placeholder="enter your phone no">
   </div>
-  <button type="submit" name="submit" class="btn btn-info">Register</button>
+  <button type="submit" name="submit" class="btn btn-primary">Register</button>
 </form>
 
+    </div>
   </div>
 </div>
 </div>

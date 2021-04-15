@@ -6,6 +6,15 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+  
+body{
+  background-image : url("/images/image1.jpg");
+  height:100px:
+  
+  
+  }
+</style>
 </head>
 <body>
 
@@ -13,7 +22,7 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar navbar-expand-md na bg-dark navbar-dark" ><h3>SAMANGA LUTHERAN HIGH SCHOOL</h3></a>
+      <a class="navbar navbar-expand-md na bg-dark navbar-dark" ><h1>SAMANGA LUTHERAN HIGH SCHOOL DASHBOARD</h1></a>
     </div>
     
       
@@ -24,18 +33,23 @@
 </div>
   <div class="container">
   <div class="row">
-  <div class="col-lg-4 ">
-  <a class="btn btn-success btn-lg" href="adminlogin.php">ADMIN lOGIN</a>
+  <div class="col-sm-2 ">
+  <a class="btn btn-success btn-lg" href="adminlogin.php">Admin Login</a>
   </div>
-  <div class="col-lg-4">
-  <a class="btn btn-success btn-lg" href="student.php">STUDENT LOGIN</a>
+  <div class="col-sm-2">
+  <a class="btn btn-success btn-lg" href="studentlogin.php">Student Login</a>
+  </div>
+  <div class="col-sm-2">
+  <a class="btn btn-success btn-lg" href="studentlogin.php">About Us</a>
+  </div>
+  <div class="col-sm-2">
+  <a class="btn btn-success btn-lg" href="/student/video.php">Galary</a>
+  </div>
+  <div class="col-sm-2">
+  <a class="btn btn-success btn-lg" href="studentlogin.php">Contact Us</a>
   </div>
 </div>
   </div>
-
-
-
-
 
 
 </body>

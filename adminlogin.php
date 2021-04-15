@@ -12,10 +12,10 @@
 </head>
 <body>
 <div class="container">
-<nav class="navbar navbar-default" style="color:red"><strong>The school Admin</strong>
+<nav class="navbar navbar-default" style="color:blue; text-align:center"><strong><h3>The school Admin</h3></strong>
   <div class="container-fluid">
     <div class="navbar-header">
-    <a class="navbar navbar-expand-md na bg-dark navbar-dark" ><h3>SAMANGA LUTHERAN HIGH SCHOOL</h3></a>
+    <a class="navbar navbar-expand-md na bg-dark navbar-dark" ><h1>SAMANGA LUTHERAN HIGH SCHOOL</h1></a>
     </div>
    
   </div>
@@ -25,7 +25,7 @@
  <div class="container">
  <div class="row">
  <div class="col-md-6 col-md-offset-3">
- <div class="panel panel-success">
+ <div class="panel panel-primary">
  <div class="panel-heading">Admin Login</div>
   <div class="panel-body">
 <?php
@@ -67,13 +67,13 @@ if(isset($_POST['submit'])){
   <form role="form" method="POST" action="adminlogin.php">
   <div class="form-group">
     <label for="email">Username:</label>
-    <input type="text" class="form-control" name="username" id="email" required="required">
+    <input type="text" class="form-control" name="username" id="email" placeholder="enter your email address" required="required">
   </div>
   <div class="form-group">
     <label for="pwd">Password:</label>
-    <input type="password" class="form-control" name="password" id="pwd" required="required">
+    <input type="password" class="form-control" name="password" id="pwd" placeholder="enter your password" required="required">
   </div>
-  <button type="submit" name="submit" class="btn btn-info">Login</button>
+  <button type="submit" name="submit" class="btn btn-primary">Login</button>
 </form>
 
   </div>
